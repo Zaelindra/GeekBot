@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/im3x/GeekBot.git"
+    "url": "git+https://github.com/Zaelindra/GeekBot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/im3x/GeekBot/issues"
+    "url": "https://github.com/Zaelindra/GeekBot/issues"
   },
-  "homepage": "https://github.com/im3x/GeekBot#readme",
+  "homepage": "hhttps://github.com/Zaelindra/GeekBot#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "form-data": "^3.0.0"
