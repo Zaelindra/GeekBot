@@ -9,15 +9,12 @@ const axios = require('axios').default
 class Plugin extends Bot {
   constructor() {
     super()
-    this.API = 'https://apis.tianapi.com/bulletin/index'
-    this.API_KEY = process.env.tianapi_key
-    if (!this.API_KEY) return this.exit()
+    this.API = 'https://api.southerly.top/api/60s?format=image'  
   }
 
   run() {
-    axios.get(this.API + '?key=' + this.API_KEY).then(res => {
-      const c = res.data.newslist[0].content
-      this.sendText(c)
+    axios.get(this.API).then(res => {
+      this.sendImage('https://api.southerly.top/api/60s?format=image')
     })
   }
 }
