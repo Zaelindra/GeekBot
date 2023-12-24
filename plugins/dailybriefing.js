@@ -9,7 +9,7 @@ const axios = require('axios').default
 class Plugin extends Bot {
   constructor() {
     super()
-    this.API = 'https://api.tianapi.com/txapi/zaoan/index'
+    this.API = 'https://apis.tianapi.com/bulletin/index'
     this.API_KEY = d99851ee0661b1a0bf9ffc8817594733
     if (!this.API_KEY) return this.exit()
   }
