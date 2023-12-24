@@ -9,7 +9,7 @@ class Plugin extends Bot {
   }
   run () {
     axios.get(this.API).then(res => {
-      this.sendMarkdown(`> 🌺🐔来碗毒鸡汤\n\n${res.data}`);
+      this.sendMarkdown(`> 🍻大朗来碗毒鸡汤\n\n${res.data}`);
     })
   }
 }
