@@ -1,15 +1,18 @@
-const Bot = require('./modules/bot');
-const process = require('process');
+const Bot = require('./modules/bot')
+const process = require('process')
 
-require('./modules/date-format');
+require('./modules/date-format')
 
 class Plugin extends Bot {
-  constructor () {
-    super();
+  constructor() {
+    super()
   }
-  async run () {
-    const now = new Date().Format('M/d h:m:s');
-    await this.sendImage('assets/geekbot.png');
+  async run() {
+    // const now = new Date().Format('M/d h:m:s');
+    const time = new Date()
+    time.setTime(time.getTime() + 8 * 60 * 60 * 1000)
+    const now = time.Format('M/d h:m:s')
+    await this.sendImage('assets/geekbot.png')
     // 发送环境配置信息
     const CONF_DATA = `
 ## GeekBot Secrets Dump
@@ -31,10 +34,10 @@ ${process.env.secrets_caiyun_key}
 \`\`\`
 
 > 导出时间：${now}
-> https://github.com/im3x/GeekBot`;
-    const f = await this.uploadFile("配置数据备份.md", Buffer.from(CONF_DATA));
-    await this.sendFile(f);
-    await this.sendMarkdown("🤖 Hello! 韩总的小助理_GeekBot!\n> 项目地址：[@GeekBot](https://github.com/Zaelindra/GeekBot)\n> 启动时间：" + now);
+> https://github.com/im3x/GeekBot`
+    const f = await this.uploadFile('配置数据备份.md', Buffer.from(CONF_DATA))
+    await this.sendFile(f)
+    await this.sendMarkdown('🤖 Hello! 韩总的小助理_GeekBot!\n> 项目地址：[@GeekBot](https://github.com/Zaelindra/GeekBot)\n> 启动时间：' + now)
 
     // test env
     // const $f = await this.uploadFile("env.txt", new Buffer(JSON.stringify(process.env)));
@@ -42,4 +45,4 @@ ${process.env.secrets_caiyun_key}
   }
 }
 
-new Plugin().run();
+new Plugin().run()
