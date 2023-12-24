@@ -1,7 +1,7 @@
 {
   "name": "GeekBot",
   "version": "1.0.0",
-  "description": "企业微信机器人摸鱼神器",
+  "description": "韩总的小助手_GeekBoot",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
