@@ -16,6 +16,7 @@ jobs:
           node-version: '12'
       - run: npm install
       - run: npm start
+      - run: npm xml2js
         env:
           bot_api: ${{ secrets.bot_api }}
           secrets_caiyun_key: ${{ secrets.caiyun_key }}
