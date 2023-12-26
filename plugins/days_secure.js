@@ -48,7 +48,7 @@ class Plugin extends Bot {
                 title: title,
                 description: title,
                 url: link,
-                picurl: link,
+                picurl: 'https://picsum.photos/200',
               }
               itemsArray.push(jsonData)
             }
